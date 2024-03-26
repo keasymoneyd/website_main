@@ -4,10 +4,6 @@ import os
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-@app.route('/')
-def index():
-    return render_template('home.html')
-
 @app.route('/generate', methods=['POST'])
 def generate():
     prompt = request.form['prompt']
